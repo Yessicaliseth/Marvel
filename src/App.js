@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useContext } from 'react'
+import StateContext from 'core/context/store'
+import styled from 'styled-components'
+import { RouterProvider } from "react-router-dom";
+import { router } from 'core/router'
+import { isEmpty } from 'lodash'
+import useService  from 'core/hooks/useService'
+import './styles.css';
+
 
 function App() {
+
+  const { state } = useContext(StateContext)
+  const { getCharaters } = useService()
+
+  useEffect(() => {
+    if(isEmpty(state?.characters)){
+      getCharaters()
+    }
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppLayout>
+      <RouterProvider router={router} />
+    </AppLayout>
   );
 }
 
 export default App;
+
+
+export const AppLayout = styled.div`
+  background-color: var(--black-font);
+  position: relativa;
+  min-height: 100vh;
+`

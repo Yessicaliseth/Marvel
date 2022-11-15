@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600&family=Ramabhadra&display=swap');
+/* font-family: 'Raleway', sans-serif; */
+/* font-family: 'Ramabhadra', sans-serif; */
+
+a{
+    text-decoration: none;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --black: #000000;
+    --black-font: #141417;
+    --black-bg: #0F0F11;
+    --black-dark-bg: #0C0C0D;
+    --green: #24F6CE;
+    --purple: #850FE1;
+    --red: #E62429;
+    --white-font: #C5C5C5;
+    --gray-font: #626270;
+    --gradiant-gray-rigth: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(50,50,58,1) 100%);
+    --gradiant-gray-left: linear-gradient(90deg, rgba(50,50,58,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+
+

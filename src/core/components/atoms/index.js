@@ -1,0 +1,8 @@
+export { default as Button} from './button'
+export { default as Input} from './input'
+export { default as P} from './tipography/p'
+export { default as Title} from './tipography/title'
+export { default as Title1} from './tipography/title1'
+export { default as Title2} from './tipography/title2'
+export { default as Title3} from './tipography/title3'
+export { default as WrapperList} from './wrapperList'
