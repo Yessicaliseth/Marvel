@@ -1,5 +1,5 @@
 import { device } from 'core/const/device';
-import styled, {css} from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const SearchBar = styled.div`
     display: flex;
@@ -21,8 +21,6 @@ export const SearchBar = styled.div`
     }
 `
 
-
-
 export const ImgCharacter = styled.div`
     background-image: ${props => props.src ? `url(${props.src})` : ``} ;
     background-repeat: no-repeat;
@@ -31,8 +29,6 @@ export const ImgCharacter = styled.div`
     height:${props => props.size ? `${props.size}px` : '50px'};
     border-radius:50%;
 `
-
-
 
 const LargeStyles = css`
 `;
@@ -66,4 +62,5 @@ export const ResultStyle = styled.div`
     @media ${device.mobile} {
         padding: 20px;
     }
+    
 `

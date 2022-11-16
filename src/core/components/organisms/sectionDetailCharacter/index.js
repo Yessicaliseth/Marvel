@@ -17,7 +17,7 @@ export default function SectionDetailCharacter(props){
             <DetailStyle className='detailStyle'>
                 <CardAvatar imgSrc={imgSrc}/>
                 <MainCharacter characterData={characterData} />
-                <CharacterSections/>
+                <CharacterSections characterData={characterData} />
             </DetailStyle>
         </SectionDetailCharacterStyle>
     )

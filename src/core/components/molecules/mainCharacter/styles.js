@@ -20,4 +20,8 @@ export const MainCharacterStyle = styled.div`
     .bottom{
         align-self: end;
     }
+    .date{
+        font-family: 'Ramabhadra', sans-serif;
+        font-weight: 200;
+    }
 `

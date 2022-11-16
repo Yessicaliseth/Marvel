@@ -5,12 +5,12 @@ import { format } from 'date-fns'
 
 export default function MainCharacter({ characterData }){
 
-    console.log('characterData',)
+    
     return(
         <MainCharacterStyle>
                 <DateContainer className='rigth '>
                     <P>Last update</P>
-                    <Title3 >{format(new Date(characterData.modified), 'MM/dd/yyyy')}</Title3>
+                    <Title3 className='date'>{format(new Date(characterData.modified), 'MM/dd/yyyy')}</Title3>
                 </DateContainer>
                 <Button className='center' href='/'><AiOutlineArrowLeft/>Back</Button>
                 <Title1 className='nameCharacter center'> {characterData?.name} </Title1>

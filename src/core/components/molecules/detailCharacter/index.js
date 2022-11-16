@@ -1,27 +1,15 @@
 import { useState } from 'react'
-import { SectionContainer } from './styles';
-import { ListStories, TitleDetail} from '..'
-import styled from 'styled-components'
+import { SectionContainer, SectionLayout, SubHeadContainer} from './styles';
+import { ListComponent, TitleDetail} from 'core/components/molecules'
 import SubMenu from 'core/components/molecules/subMenu';
-import { ITEMS_MENU } from 'core/const/ui'
-
-const SectionLayout = styled.div`
-    background-color: var(--black-dark-bg);
-    height: calc(100vh - 200px);
-    overflow-y: scroll;
-`
+import { ITEMS_MENU } from 'core/const/ui';
+import { Title3 } from 'core/components/atoms'
 
 
-const COMPONENTS = {
-    stories:ListStories,
-    comics:ListStories
-}
-
-export default function CharacterSections(){
+export default function CharacterSections({ characterData }){
 
     const [ view, setView ] = useState(Object.keys(ITEMS_MENU)[0])
-    const ContentComponent = COMPONENTS[view] || <p>Not component to render</p>
-
+    const sourceList = characterData[view].items
     return(
         <SectionLayout>
             <SectionContainer>
@@ -29,8 +17,16 @@ export default function CharacterSections(){
                     itemsMenu={ITEMS_MENU}
                     handleClick={setView}
                 />
-                <TitleDetail title={ITEMS_MENU[view].uiName}/>
-                <ContentComponent/>
+                <TitleDetail 
+                    title={ITEMS_MENU[view].uiName} 
+                    amount={characterData[view]?.items?.length}
+
+                />
+                <SubHeadContainer>
+                    <Title3>Name</Title3>
+                    <Title3>Type</Title3>
+                </SubHeadContainer>
+                <ListComponent list={sourceList} />
             </SectionContainer>
         </SectionLayout>
     )

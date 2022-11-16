@@ -36,10 +36,10 @@ export default function CharacterList(){
                             const currentCharacter = characterList[character]
                             const imgSrc = `${currentCharacter?.thumbnail?.path}.${currentCharacter?.thumbnail?.extension}`
                             return(
-                                <Link key={index} to={`${currentCharacter?.id}`}>
+                                <Link key={index} to={`${currentCharacter?.id}`} className='linkDetailCharacter'>
                                     <CardResult >
-                                        <ImgCharacter src={imgSrc}/>
-                                        <Title1 size={'medium'}>{currentCharacter?.name}</Title1>
+                                        <ImgCharacter className='imgCard' src={imgSrc}/>
+                                        <Title1 className='titleCard'>{currentCharacter?.name}</Title1>
                                         <P className="right" color="var(--green)">See more</P>
                                     </CardResult>
                                 </Link>

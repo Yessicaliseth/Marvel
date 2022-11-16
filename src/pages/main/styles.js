@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const MainStyle = styled.div`
     width: 100vw;
@@ -6,5 +6,6 @@ export const MainStyle = styled.div`
     font-family: 'Raleway', sans-serif;
     display: grid;
     grid-template-rows: auto 1fr;
+
 `
 
