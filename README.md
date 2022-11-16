@@ -1,3 +1,6 @@
+
+![Image text](https://github.com/Yessicaliseth/Marvel/blob/master/public/Desktop%20-%201.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
