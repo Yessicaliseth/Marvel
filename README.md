@@ -1,5 +1,7 @@
 
 ![Image text](https://github.com/Yessicaliseth/Marvel/blob/master/public/Desktop%20-%201.png)
+![Image text](https://github.com/Yessicaliseth/Marvel/blob/master/public/Desktop%20-%202.png)
+![Image text](https://github.com/Yessicaliseth/Marvel/blob/master/public/Desktop%20-%203.png)
 
 # Getting Started with Create React App
 
